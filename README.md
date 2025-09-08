@@ -9,7 +9,7 @@ go run . -rtp {значение}
 Получение мультипликатора
 
 ```
-curl --request GET "http://localhost:8080/get"
+curl --request GET "http://localhost:64333/get"
 ```
 
 ```

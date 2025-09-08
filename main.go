@@ -37,8 +37,8 @@ func main() {
 
 	m.HandleFunc("/get", getHandlerFunc(cfg.RTP))
 
-	log.Println("Server starting on :8080")
-	log.Fatal(http.ListenAndServe(":8080", m))
+	log.Println("Server starting on :64333")
+	log.Fatal(http.ListenAndServe(":64333", m))
 }
 
 func getHandlerFunc(rtp float64) func(w http.ResponseWriter, r *http.Request) {
