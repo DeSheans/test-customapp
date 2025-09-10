@@ -23,7 +23,7 @@ func TestMult(t *testing.T) {
 
 	RTP := sum1 / sum0
 	if math.Abs(RTP-rtp) > 0.1 {
-		t.Errorf("Client RTP is greater than the specified rtp by: %f", RTP-rtp)
+		t.Errorf("Client RTP: %f\nExpected rtp: %f\nClient RTP is greater than the specified rtp by: %f", RTP, rtp, RTP-rtp)
 	}
 }
 
