@@ -1,10 +1,16 @@
 package pkg
 
-import "math/rand/v2"
+import (
+	"math"
+	"math/rand/v2"
+)
 
 func Mult(rtp float64) float64 {
-	if rand.Float64() < rtp {
-		return 9000 + rand.NormFloat64()*1000
+	if rand.Float64() > rtp {
+		value := math.Pow(rand.Float64(), 8)
+		return 1 + value*4999
+	} else {
+		value := 1 - math.Pow(1-rand.Float64(), 8)
+		return 5000 + value*5000
 	}
-	return 1.0 + rand.NormFloat64()*0.5*1000
 }
